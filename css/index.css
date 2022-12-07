@@ -18,6 +18,11 @@
     src: url('../fonts/textos/LibreBaskerville-Regular.ttf');
 }
 
+@font-face {
+    font-family: encabezados;
+    src: url("../fonts/Lobster/Lobster-Regular.ttf");
+}
+
 *{
     box-sizing: border-box;
 }
@@ -31,29 +36,31 @@ body{
 .textos{
     padding: 4% 2%;
 }
+/*
 .titulo_section{
-    font-family: subTitulos;
+    
     padding-top: 10px ;
     padding-bottom: 10px;
     text-align: center;
-    font-size: 3.5rem;
+    
 }
+*/
+.titulo_section{
 
-.flechita {
-    display: block;
-    position: absolute;
-    content: ”;
-    width: 100px;
-    height: 100px;
-    bottom: -50px;
-    left: 50%;
-    margin-left: -50px;
-    top: 180%;
-    background-color: #538a80; /** cambia tu color ***/
-    -ms-transform: rotate(45deg);
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    z-index: 1;
+    font-family: encabezados;
+
+    color: #D5E2D6;
+    width: auto;
+    border: 5px solid white;
+    text-align: center;
+    line-height: 50px;
+    font-size: 5rem;
+    padding-top: 10px ;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    
+    /*-----------------------*/
+    text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D, 8px 8px #4A744D, 9px 9px #4A744D, 10px 10px #4A744D, 11px 11px #4A744D, 12px 12px #4A744D, 13px 13px #4A744D, 14px 14px #4A744D, 15px 15px #4A744D, 16px 16px #4A744D, 17px 17px #4A744D, 18px 18px #4A744D, 19px 19px #4A744D, 20px 20px #4A744D, 21px 21px #4A744D, 22px 22px #4A744D, 23px 23px #4A744D, 24px 24px #4A744D, 25px 25px #4A744D, 26px 26px 6px #06520C;
 }
 
 /****************************Hero section***********************/
@@ -86,10 +93,24 @@ body{
 .grid2{
     display: grid;
     grid-template-columns: 50% 50%;
+    
 }
 
+.col2 li{
+    margin: 10px;
+}
 
+.slideshow-container{
+    border: 5px solid white;
+}
 
+.nombreNoticias{
+    font-family: subTitulos;
+    font-size: 2rem;
+
+}
+
+/* slides de fotos */
 .slideshow-container {
     width: 100%;
     position: relative;
@@ -176,6 +197,18 @@ body{
 }
 
 /******************************Regiones*************************/
+.nombreRegiones{
+    font-family: subTitulos;
+    font-size: 1.2rem;
+}
+
+#titulo_regiones{
+    
+    border: 5px solid  #538a80;
+    padding-bottom: 55px;
+
+}
+
 .grid4{
     display: grid;
     grid-template-columns: 25% 25% 25% 25%;
@@ -190,9 +223,6 @@ body{
 
 .card{
     border:5px solid rgba(0, 0, 0, 0.787);
-    border-bottom-left-radius: 3%;
-    border-bottom-right-radius: 3%;
-
     
 }
 
@@ -218,11 +248,13 @@ body{
 }
 
 #liyue img:hover{
+    transition: 1s;
     background: rgb(187,190,82);
     background: linear-gradient(0deg, rgba(187,190,82,1) 0%, rgba(182,137,51,1) 35%, rgba(147,66,0,1) 100%);    
 }
 
 #inazuma img:hover{
+    transition: 1s;
     background: rgb(170,82,190);
     background: linear-gradient(0deg, rgba(170,82,190,1) 0%, rgba(123,51,182,1) 35%, rgba(70,45,152,1) 100%);
 }
@@ -233,6 +265,7 @@ body{
 }
 */
 #sumeru img:hover{
+    transition: 1s;
     background: rgb(145,123,40);
 background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%, rgba(62,147,84,1) 100%);
 }
@@ -241,3 +274,48 @@ background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%,
     background-color:#ccfff6;
 }
 
+/***********************************************Media queries*************************************************************/
+@media only screen and (width<=800px) {
+
+    .grid4{
+        grid-template-columns: 50% 50%;
+    }
+    
+    .grid2{
+        grid-template-columns: 100%;
+    }
+
+}
+
+@media only screen and (width<=600px) {
+
+    .grid4{
+        grid-template-columns: 100%;
+        width: 80%;
+        margin: auto;
+    }
+
+    .grid2{
+        grid-template-columns: 100%;
+    }
+    
+}
+
+@media only screen and (width<=400px) {
+
+    #titulo{
+        font-size: 4.5rem;
+    }
+
+    .grid4{
+        grid-template-columns: 100%;
+        width: 90%;
+        margin: auto;
+    }
+
+    .grid2{
+        grid-template-columns: 100%;
+    }
+
+    
+}
