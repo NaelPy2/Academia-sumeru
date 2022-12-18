@@ -31,7 +31,7 @@ body{
     font-family:body;
     margin: 0;
     padding: 0;
-    background-color: #538a80 ;
+    background-color: #5a8a80 ;
 }
 .textos{
     padding: 4% 2%;
@@ -51,7 +51,7 @@ body{
 
     color: #D5E2D6;
     width: auto;
-    border: 5px solid white;
+    
     text-align: center;
     line-height: 50px;
     font-size: 5rem;
@@ -62,6 +62,65 @@ body{
     /*-----------------------*/
     text-shadow: 1px 1px #4A744D, 2px 2px #4A744D, 3px 3px #4A744D, 4px 4px #4A744D, 5px 5px #4A744D, 6px 6px #4A744D, 7px 7px #4A744D, 8px 8px #4A744D, 9px 9px #4A744D, 10px 10px #4A744D, 11px 11px #4A744D, 12px 12px #4A744D, 13px 13px #4A744D, 14px 14px #4A744D, 15px 15px #4A744D, 16px 16px #4A744D, 17px 17px #4A744D, 18px 18px #4A744D, 19px 19px #4A744D, 20px 20px #4A744D, 21px 21px #4A744D, 22px 22px #4A744D, 23px 23px #4A744D, 24px 24px #4A744D, 25px 25px #4A744D, 26px 26px 6px #06520C;
 }
+/****************************barra navegacion*******************/
+#barraNavegacion {
+    position:sticky; /* se queda "pegado" */
+    top:0;           /* a la parte superior */
+    z-index: 99;     /* podría tener 98 capas por debajo */
+    opacity: 0.5; 
+    text-align: center;
+    width: 100%;
+    display: block;
+}
+
+.fa-arrow-up {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+}
+
+#arriba {color:black;}              
+
+/* Add a black background color to the top navigation */
+.topnav {
+    font-family: subTitulos;
+    background-color: rgb(250, 235, 215) ;
+    overflow: hidden;
+    text-align: center;
+}
+
+ /* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+  /* Change the color of links on hover */
+
+#barraNavegacion:hover{
+    opacity: 1;
+    transition: 0.5s;
+}
+.topnav a:hover {
+    
+    background-color: rgb(68, 119, 136);
+    color: black;
+}
+
+ /* Add an active class to highlight the current page */
+.topnav a.active {
+    color: white;
+}
+
+ /* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+} 
+
 
 /****************************Hero section***********************/
 #hero{
@@ -90,6 +149,11 @@ body{
 }
 
 /******************************novedades************************/
+
+#titulo_noticias{
+    border: 5px solid white;
+}
+
 .grid2{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -204,9 +268,9 @@ body{
 
 #titulo_regiones{
     
-    border: 5px solid  #538a80;
+    border: 5px solid  #475e5a;
     padding-bottom: 55px;
-
+    
 }
 
 .grid4{
@@ -267,12 +331,100 @@ body{
 #sumeru img:hover{
     transition: 1s;
     background: rgb(145,123,40);
-background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%, rgba(62,147,84,1) 100%);
+    background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%, rgba(62,147,84,1) 100%);
 }
 
 #regiones{
-    background-color:#ccfff6;
+    background-color:rgb(117, 168, 158);
+    
 }
+
+/***********************************************FOOTER********************************************************************/
+.tituloEnlace{
+    font-family: encabezados;
+    padding-bottom: 8px;
+    font-size: 1.5rem;
+    color: #ffffff;
+    text-align: center;
+}
+
+
+#qFooter{
+    
+    text-align: center;
+    font-family: titulo;
+    color: antiquewhite;
+    width: 100%;
+    font-size: 2.5rem;
+    margin-bottom: 3%;
+
+}
+
+.grid3{
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+}
+
+.cFooter img{
+    width: 100%;
+    margin-left: 10px;
+}
+
+.listaFooter a{
+    font-family: subTitulos;
+    text-decoration: none;
+    color: rgb(12, 70, 73);
+    font-size: 1.3rem;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    width: 95%;
+    text-align: center;
+    
+}
+
+.enlaces:hover {
+    background-color: rgb(68, 119, 136);
+    color:white;
+    transition: 0.5s;
+
+}
+
+.fa {
+    box-sizing:content-box;
+    display:block;
+    padding: 20px;
+    margin: 5px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 15%;
+    
+}
+.fa:hover{
+    background-color: rgb(68, 119, 136);
+    color:white;
+    transition: 0.5s;
+}
+
+#redesSociales{
+    text-align: center;
+
+}
+.gridSocial{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+}
+.colSocial a{
+    text-decoration: none;
+    color: black;
+
+}
+
+
+
+
 
 /***********************************************Media queries*************************************************************/
 @media only screen and (width<=800px) {
@@ -284,6 +436,17 @@ background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%,
     .grid2{
         grid-template-columns: 100%;
     }
+    #qFooter{
+        font-size: 2rem;
+    }
+
+    .grid3{
+        grid-template-columns: 100%;
+        width: 65%;
+        margin: auto;
+        
+
+    }
 
 }
 
@@ -291,12 +454,23 @@ background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%,
 
     .grid4{
         grid-template-columns: 100%;
-        width: 80%;
+        width: 70%;
         margin: auto;
     }
 
     .grid2{
         grid-template-columns: 100%;
+    }
+    #qFooter{
+        font-size: 1.6rem;
+    }
+
+    .grid3{
+        grid-template-columns: 100%;
+        width: 65%;
+        margin: auto;
+        
+
     }
     
 }
@@ -309,7 +483,7 @@ background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%,
 
     .grid4{
         grid-template-columns: 100%;
-        width: 90%;
+        width: 95%;
         margin: auto;
     }
 
@@ -317,5 +491,21 @@ background: linear-gradient(0deg, rgba(145,123,40,1) 0%, rgba(102,170,72,1) 60%,
         grid-template-columns: 100%;
     }
 
+    #qFooter{
+        font-size: 1.6rem;
+    }
+    .gridSocial{
+        grid-template-columns: 50% 50%;
+    }
+
+    .grid3{
+        grid-template-columns: 100%;
+        width: 65%;
+        margin: auto;
+        
+
+    }
+    
+    
     
 }
